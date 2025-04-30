@@ -13,4 +13,8 @@ using Appiss1.Modelos;
         }
 
         public DbSet<Appiss1.Modelos.Cliente> Cliente { get; set; } = default!;
+
+public DbSet<Appiss1.Modelos.Reserva> Reserva { get; set; } = default!;
+
+public DbSet<Appiss1.Modelos.PlanRecompensas> PlanRecompensas { get; set; } = default!;
     }
