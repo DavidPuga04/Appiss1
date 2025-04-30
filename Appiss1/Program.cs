@@ -1,4 +1,8 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SQLServerClienteSCP>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerClienteSCP") ?? throw new InvalidOperationException("Connection string 'SQLServerClienteSCP' not found.")));
 
 // Add services to the container.
 
